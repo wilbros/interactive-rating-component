@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+  --ff-op: 'Overpass', sans-serif;
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --star-rate: hsl(215, 18%, 28%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.6rem;
+  color: var(--medium-grey);
+  margin: 0.5rem 0rem;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 1.5rem;
+  background-color: var(--very-dark-blue);
+  font-family: var(--ff-op);
+  text-decoration-skip: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-page,
+.thank-you-page {
+  background-color: var(--dark-blue);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 400px;
+}
+
+.star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-page .star,
+.rating-page section input {
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--star-rate);
+  border: none;
+  border-radius: 50%;
+}
+
+.rating-page section input {
+  font-family: var(--ff-op);
+  font-weight: 700;
+  color: var(--light-grey);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.rating-page section input:hover {
+  background-color: var(--orange);
+}
+
+.rating-page section input:focus {
+  background-color: var(--medium-grey);
+}
+
+.rating-page h1 {
+  color: var(--white);
+  margin: 1rem 0rem 0.5rem;
+}
+
+.rate-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0rem;
+}
+
+.rating-page section .submit-btn {
+  width: 100%;
+  background-color: var(--orange);
+  padding: 0.75rem;
+  border-radius: 2rem;
+  border: none;
+  color: var(--white);
+  letter-spacing: 0.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.rating-page section .submit-btn:hover {
+  color: orange;
+  background-color: var(--white);
+}
+
+/* THANK YOU STATE STARTS HERE */
+.hidden {
+  display: none;
+}
+
+.thank-you-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.rate-result p{
+  /* border: solid 1px red; */
+  background-color: var(--star-rate);
+  padding: 0.2rem 0.75rem 0rem;
+  color: var(--orange);
+  border-radius: 2rem;
+  margin: 1.5rem 0rem 1rem;
+}
+
+.thank-you-page h2 {
+  color: var(--white);
+  margin: 1rem 0rem;
+}
